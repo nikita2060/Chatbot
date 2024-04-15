@@ -18,9 +18,8 @@
             <label for="mob">Mobile no.:</label><br>
             <input type="text" id="mob" name="mob"><br>
             <p id="mobError"></p>
-            <label for="pwd">Password:</label><br>
-            <input type="text" id="pwd" name="pwd"><br>
-            <p id="pwdError"></p>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
             <input type="submit" id="sub" value="Submit">
         </form>
         
@@ -75,19 +74,6 @@
   
             }
         });
-        inputPwd.addEventListener('keyup',function(e){
-            var regex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
-            var str = inputPwd.value;
-            if (regex.test(str)) {
-                inputPwd.style.border = ""; 
-                document.getElementById("pwdError").innerHTML = "";                  
- 
-            }else{
-                inputPwd.style.border = "2px solid red";
-                document.getElementById("pwdError").innerHTML = "Password not as per format";                  
-            }
-        });
-
     </script>
     
 </body>
