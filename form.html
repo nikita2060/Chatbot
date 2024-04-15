@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>login</title>
+</head>
+<body>
+    <h1>Login form</h1>
+    <div class="div-calc">
+        <form  action="process.php" method="post">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <p id="fnameError"></p>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <p id="lnameError"></p>
+            <label for="mob">Mobile no.:</label><br>
+            <input type="text" id="mob" name="mob"><br>
+            <p id="mobError"></p>
+            <label for="pwd">Password:</label><br>
+            <input type="text" id="pwd" name="pwd"><br>
+            <p id="pwdError"></p>
+            <input type="submit" id="sub" value="Submit">
+        </form>
+        
+    </div>
+    <script>
+        var inputFname = document.getElementById("fname");
+        var inputLname = document.getElementById("lname");
+        var inputMob = document.getElementById("mob");
+        var inputPwd = document.getElementById("pwd");
+        var inputSubmit = document.getElementById("sub");
+        
+
+        inputFname.addEventListener('keyup',function(e){
+            var regex = /^[a-zA-Z]([0-9a-zA-Z]){2,10}$/;
+            var str = inputFname.value;
+            if (regex.test(str)) {
+                inputFname.style.border = "";
+                document.getElementById("fnameError").innerHTML = "";
+                
+                
+            }else{
+                inputFname.style.border = "2px solid red";
+                document.getElementById("fnameError").innerHTML = "First name not as per format";
+                               
+            }
+                
+        });
+        inputLname.addEventListener('keyup',function(e){
+            var regex = /^[a-zA-Z]([0-9a-zA-Z]){2,10}$/;
+            var str = inputLname.value;
+            if (regex.test(str)) {
+                inputLname.style.border = "";
+                document.getElementById("lnameError").innerHTML = "";                
+                
+            }else{
+                inputLname.style.border = "2px solid red"; 
+                document.getElementById("lnameError").innerHTML = "Last name not as per format";                
+ 
+            }
+        });
+        inputMob.addEventListener('keyup',function(e){
+            var regex = /^([0-9]){10}$/;
+            var str = inputMob.value;
+            if (regex.test(str)) {
+                inputMob.style.border = "";
+                document.getElementById("mobError").innerHTML = "";                
+
+                
+            }else{
+                inputMob.style.border = "2px solid red"; 
+                document.getElementById("mobError").innerHTML = "Mobile number not as per format";                
+  
+            }
+        });
+        inputPwd.addEventListener('keyup',function(e){
+            var regex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+            var str = inputPwd.value;
+            if (regex.test(str)) {
+                inputPwd.style.border = ""; 
+                document.getElementById("pwdError").innerHTML = "";                  
+ 
+            }else{
+                inputPwd.style.border = "2px solid red";
+                document.getElementById("pwdError").innerHTML = "Password not as per format";                  
+            }
+        });
+
+    </script>
+    
+</body>
+</html>
