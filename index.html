@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-XB3xTXd7h8YUv5J5Fz4tATfmusOBblJxalIz4JjJvOacXRXKmPo4BkP7TKhGZ0FlzmgZDdURyBZew+G8UdfwSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <main>
+    <div class="chatbot-toggler">
+      <span>+</span>
+    </div>
+
+    <div class="chatbot">
+      <header>
+        <h2>PyroNet</h2>
+        <span class="material-symbols-outlined">&#128680;</span>
+      </header>
+      <ul class="chatbot chatsbody">
+        <li class="chat incoming">
+          <img src="rob.jpg" alt="User Avatar"> <P>Hi there 👋 <br> How can I help you today?</P>
+        </li>
+        <li class="chat outgoing">
+          <p>Can I get a report of the Timber Mart fire case in Mumbai?</p>
+        </li>
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter your Text...." required></textarea>
+  
+        <span id="send-btn" class="material-symbols-outlined"><i class="fas fa-paper-plane"></i></span>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
