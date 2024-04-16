@@ -1,5 +1,5 @@
-from langchain.embeddings.sentence_transformer import SentenceTransformerEmbeddings
-from langchain.vectorstores import Chroma
+from langchain_community.embeddings.sentence_transformer import SentenceTransformerEmbeddings
+from langchain_community.vectorstores import Chroma
 
 
 TEXT = ["Python is a versatile and widely used programming language known for its clean and readable syntax, which relies on indentation for code structure",
